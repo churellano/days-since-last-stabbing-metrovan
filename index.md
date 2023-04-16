@@ -1,0 +1,1 @@
+# It has been **[0 days](https://globalnews.ca/news/9626929/surrey-central-skytrain-station-stabbing-transit-violence/)** since the last stabbing in Metro Vancouver.
