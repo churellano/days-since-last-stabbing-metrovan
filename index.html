@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Days Since Last Stabbing in Metro Vancouver</title>
+</head>
+<body>
+  <div class="container">
+    <span>
+      It has been
+      <span id="days"></span>
+      since the last stabbing in Metro Vancouver.
+    </span>
+  </div>
+</body>
+
+<script>
+  var output = '<a href="https://globalnews.ca/news/9626929/surrey-central-skytrain-station-stabbing-transit-violence/">';
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+  var stabdate = new Date(1681542000000);
+  var numdays = Math.floor((today.getTime() - stabdate.getTime()) / 86400000);
+  output += numdays + '</a> day';
+  if (numdays != 1) {
+    output += 's';
+  }
+  document.getElementById('days').innerHTML = output;
+</script>
+</html>
