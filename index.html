@@ -27,7 +27,7 @@
   const hour = 15;
   const minutes = 30;
   
-  const stabDate = new Date(year, month, day, hour, minutes);
+  const stabDate = new Date(year, month - 1, day, hour, minutes);
   const daysSinceStabbing = Math.floor((today.getTime() - stabDate.getTime()) / 86400000);
   output += daysSinceStabbing + '</a> day';
   if (daysSinceStabbing != 1) {
