@@ -18,13 +18,19 @@
 </body>
 
 <script>
-  var output = '<a href="https://globalnews.ca/news/9865362/man-critical-condition-stabbing-surrey-bus/">';
-  var today = new Date();
-//   today.setHours(0, 0, 0, 0);
-  var stabdate = new Date(1690065000000);
-  var numdays = Math.floor((today.getTime() - stabdate.getTime()) / 86400000);
-  output += numdays + '</a> day';
-  if (numdays != 1) {
+  const output = '<a href="https://globalnews.ca/news/9865362/man-critical-condition-stabbing-surrey-bus/">';
+  const today = new Date();
+
+  const year = 2023;
+  const month = 7; // Month number
+  const day = 22;
+  const hour = 15;
+  const minutes = 30;
+  
+  const stabDate = new Date(year, month, day, hour, minutes);
+  const daysSinceStabbing = Math.floor((today.getTime() - stabDate.getTime()) / 86400000);
+  output += daysSinceStabbing + '</a> day';
+  if (daysSinceStabbing != 1) {
     output += 's';
   }
   document.getElementById('days').innerHTML = output;
